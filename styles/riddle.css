@@ -1,0 +1,34 @@
+/*
+	Comment
+*/
+
+#riddleHeader{
+	margin:				30px 0 20px 20px;
+	width: 				350px;
+	height: 			80px;
+	color: 				#66fa7f;
+	background-color: 	black;
+	font-size:			16px;
+	font-family:		Copperplate, Papyrus, fantasy; }
+
+#riddleBox{
+	width: 				350px;
+	height:				120px;
+	border: 			10px inset #aaa;
+	background-color: 	black; }
+
+.cards{
+	margin:		10px 0 0 10px;
+	border: 	none;
+	width:		70px;
+	height:		100px;
+	color:		white;
+	background-color: #777; }
+
+.cards:first-child 	{ margin-left: 20px; }
+	
+riddleFooter{
+	width: 	340px;
+	height:	80px;
+	color: 	white;
+	background-color: black; }

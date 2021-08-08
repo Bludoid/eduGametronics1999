@@ -1,0 +1,109 @@
+/*
+centre elements in division
+*/
+
+
+button
+{	width: 20px;
+	height: 24px;
+	margin: 0px 5px 5px 0px;
+	background-color: #555;
+	color: #aaa;
+	font-size: 10px;
+	font-family: Comic Sans MS;
+	text-align: justify; }
+
+li	{ color: yellow; }
+
+section.hide
+{	 visibility: hidden;
+	 disabled: true;
+	 opacity: 0;
+ 	 transition: 5s; }
+
+#hmWordTray button
+{	}
+
+#hmCategory
+{	background-color: #000;
+	color: #ddd; }
+
+#hmHints	
+{ 	padding-top: 20px;
+	color: #6dbb35; }
+
+#hmImage
+{	margin: 20px;
+	width: 150px;
+	height: 140px;
+	margin-right: 50px;
+	opacity: 85%; }
+
+#hmKeyboard
+{	width: 355px;
+	height: 75px;
+	background-color: #000;
+	color: #fff;
+	padding: 5px 0 0 5px;
+	margin: 10px 0 0 20px; }
+
+#hmKeyboard button
+{	text-align: center;
+	width: 32px;
+	height: 26px;
+	font-size: 11px;
+	font-family: Comic Sans MS;
+	background-color: black; }
+	
+/* not needed */
+#hmKeyboard button.show
+{	visibility: visible;
+	color: #aaa;
+	opacity: 1;
+  	transition: 1s; }
+
+#hmKeyboard button.hide
+{
+	visibility: hidden;
+	disabled: true;
+	opacity: 0;
+	transition: 3s;
+}
+
+#hmViewer
+{	width: 360px;
+	height: 200px;
+	background color: #333;
+	color: #aaa; }
+
+#hmWord
+{	width: 360px;
+	height: 80px;
+	margin-left: 25px;
+	background-color: #000;
+	color: #aaa; }
+
+#hmWord button.show
+{	visibility: visible;
+	color: #aaa;
+	opacity: 1;
+  	transition: 0.9s; }
+
+/**********  NOT NEEDED  *************
+#hearts
+{
+	margin-top: 5px;
+	width: 90%;
+	vertical-align: center;
+}
+
+.heart
+ {
+	width: 22px;
+	height: 22px;
+	border: 5px ridge #777;
+	margin: 5px 2px;
+}
+
+.heart:first-child
+{margin-left: 20px;}

@@ -1,0 +1,74 @@
+#imageFrame {
+    width: 340px;
+    height: 226px;
+    padding: 2px;
+    margin-right: 5px;
+}
+
+.lgReveal {
+    width: 58px;
+    height: 58px;
+    background-color: darkgrey;
+    margin: -2.5px;
+}
+
+#inputAnswer {
+    width: 70px;
+    height: 19px;
+    border-radius: 3px;
+}
+
+input {
+    width: 80px;
+}
+
+.lgButtons {
+    height: 25px;
+    width: 70px;
+    background-color: grey;
+    border: 1px solid darkgrey;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+#lgContinue {
+    height: 25px;
+    width: 90px;
+    /*background-color: green;*/
+    border-radius: 5px;
+}
+
+#lgGive {
+    height: 25px;
+    width: 70px;
+    border: 1px solid darkgrey;
+    border-radius: 3px;
+    margin-left: 5px;
+    background-color: red;
+}
+
+#lgBar button {
+    height: 36px;
+    width: 20px;
+    background-color: red;
+}
+
+#lgInfo {
+    display: inline-block;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border: 2px solid lightblue;
+    border-radius: 15px;
+}
+
+#lgShow {
+     width: 250px; 
+     height: 169px; 
+     border: 2px solid blue;
+}
+

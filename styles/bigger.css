@@ -1,0 +1,60 @@
+#biggerFrame {
+    width: 340px;
+    height: 220px;
+    padding: 2px;
+    margin-right: 5px;
+}
+
+#biggerQ {
+    width: 300px;
+    height: 35px;
+}
+
+
+#biggerBar button {
+    height: 65px;
+    width: 20px;
+    background-color: red;
+    margin: -2px;
+}
+
+#biggerBar {
+    padding-top: 3px;
+}
+
+#biggerInfo {
+    display: inline-block;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border: 2px solid lightblue;
+    border-radius: 15px;
+}
+
+#biggerLeft, #biggerRight {
+    width: 130px;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+
+#biggerMiddle {
+    width: 70px;
+    text-align: center;
+}
+
+.biggerOp {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+#noOfQB {
+    color: yellow;
+}

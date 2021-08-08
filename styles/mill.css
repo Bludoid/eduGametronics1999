@@ -1,0 +1,42 @@
+#millFrame {
+    width: 340px;
+    height: 265px;
+    padding: 2px;
+    margin-right: 5px;
+}
+
+#millQ {
+    width: 300px;
+    height: 100px;
+}
+
+.millChoice {
+    width: 150px;
+    height: 55px;
+    background-color: darkgrey;
+    margin: 2px;
+}
+    
+#millBar button {
+    height: 85px;
+    width: 20px;
+    background-color: red;
+    margin: -2px;
+}
+
+#millBar {
+    padding-top: 3px;
+}
+
+#millInfo {
+    display: inline-block;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border: 2px solid lightblue;
+    border-radius: 15px;
+}
