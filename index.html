@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>eduGAMETRONICS</title>
+		<link rel= "stylesheet" href= "odin.css">
+	</head>
+	
+	<body>
+	    
+	<div id="allContent">
+		<header>
+			<p id= "bulletin"></p>
+			<button id= "settingsButt" 	onclick= "menuSettings()" 	accesskey= "S">Settings </button>
+			<button id= "helpButt" 		onclick= "menuHelp()"		accesskey= "H">Help     </button>
+			<button id= "aboutButt" 	onclick= "menuAbout()"		accesskey= "A">About    </button>
+			<button id= "quitButt" 		onclick= "menuQuit()"		accesskey= "Q">Quit	    </button>
+		</header>
+		
+		<div id= "board">
+			<div id= "btop"   class= "across"> </div>
+			<div id= "bleft"  class= "down">   </div>
+			
+			<section id= "bmiddle">	
+			<div id="introScreen"><h3 id= "welcome"> WELCOME TO eduGAMETRONICS 1999</h3></div>
+			</section>
+			
+			<div id= "bright"  class= "down">   </div>
+			<div id= "bbottom" class= "across"> </div>
+		</div>
+		<footer id= "setting"> </footer>
+		
+<!-- xxxxxxxxxxxxxxxxxxx    INTROFORM 0 HTML   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->	
+<script id= "intro0" type= "text/html">
+<link rel= "stylesheet" href= "styles/intro0.css">
+
+	<form id= "introForm0">
+		<p>Hello World.</p>
+		<p>Hello?</p>
+		<p>If you are reading this message...</p>
+		<p>My name is Billy Bitwise.</p>
+		<p>I'm stuck inside this game I made.</p>
+		<p>I've waited patiently for someone...</p>
+		<p>To play my game and win...</p>
+		<p>So that I may be free again.</p>
+		<p>Wanna play?</p>
+		<button id= "wannaPlay" type= "button" onclick= "loadIntro1()">PLAY</button>
+	</form>
+</script>
+	
+<!-- xxxxxxxxxxxxxxxxxxx    INTROFORM 1 HTML   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<script id= "intro1" type= "text/html">
+<link rel= "stylesheet" href= "styles/intro1.css">
+
+	<form id= "introForm1">
+		<h4>Are you playing alone or with a friend?</h4>
+		<input type="radio" name= "players" id="r1" checked>1 player<br>
+		<input type="radio" name= "players" id="r2">2 players<br><br>
+		<button style= "margin-left: 40px" id= "introButton" type= "button" onclick="submitPlayers()">NEXT</button>
+	</form> <br>
+</script>
+	
+<!-- xxxxxxxxxxxxxxxxxxx    INTROFORM 2 HTML   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->		
+<script id= "intro2" type= "text/html">
+<link rel= "stylesheet" href= "styles/intro2.css">		
+	
+	<form id= "introForm2">
+		<h4>Enter your name</h4>
+		<label>Player one:<input type="text" id= "p1Name" size= "15" maxLength= "15" placeholder= "Player1"></label> <br>
+		<label id= "p2NameLabel" for="p2Name">Player two:</label>
+		<input type="text" name= "p2Name" id= "p2Name" size= "15" maxLength= "15" placeholder= "Player2"> <br>	
+		<button id= "intro2Button" type= "button" onclick="submitNames()">NEXT</button>
+	</form>
+</script>
+
+<!-- xxxxxxxxxxxxxxxxxxx    INTROFORM 3 HTML   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->		
+<script id= "intro3" type= "text/html">
+<link rel= "stylesheet" href= "styles/intro3.css">
+		
+	<form id= "introForm3">
+		<p style= "font-size: 20px; margin-left: 20px">
+		Let us roll to see who goes first<br>
+		Each player rolls one die one time<br>
+		The highest roller begins the game...<br> </p>
+		
+		<p id= "p1Result"><span id= "spanP1Name"></span>, click the roll button...
+			<button id= "p1Roll" onclick= "rollP1()" style= "display: inline">Roll</button><br>
+		</p>
+		<p id= "p2Result"><span id= "spanP2Name"></span>, your turn to roll...
+			<button id= "p2Roll" onclick= "rollP2()" style= "display: inline">Roll</button><br>
+		</p>
+		<p id= "rollResult">
+			<button style= "float: right; width: 100px" id="begin" type= "button" onclick= "loadGt1999()">Begin</button>
+		</p>
+	</form>
+</script>		
+		
+<!-- xxxxxxxxxxxxxxxxxxx    GAMETRONICS1999 HTML   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<script id= "gametronics1999" type= "text/html">
+<link rel= "stylesheet" href= "styles/gametronics1999.css">
+
+	<header>
+		<p id= "headerMessage" style= "color: yellow"></p>
+		<button id= "headerButton" type= "button" onclick= "playGame()" style= "display: none"></button>
+	</header>
+	
+	<div id= "dumpP1" class= "playerTray">
+		<img id= "avatarP1" style= "float: left" class= "avatar" src= "images/board/tiger.png"></img>			
+		<p id= "nameP1" style= "font-size: 26px"></p><br><br>
+		<p id= "pointsP1"></p><br>
+		<p id= "locationP1"></p><br>		
+		
+		<div id= "dumpRollP1">
+			<p id= "messageP1">It's your turn to roll</p>
+			<button id= "rollButtonP1" type= "button" onclick= "movePlayer(this)">ROLL</button>
+		</div>
+	</div>
+	
+	<div id= "dumpP2" class= "playerTray">
+		<img id= "avatarP2" style= "float: left" class= "avatar" src= "images/board/ladyBug.png"></img>
+		<p id= "nameP2" style= "font-size: 26px"></p><br><br>
+		<p id= "pointsP2"></p><br>
+		<p id= "locationP2"></p><br>
+	
+		<div id= "dumpRollP2">
+			<p id= "messageP2">It's your turn to roll</p>
+			<button id= "rollButtonP2" type= "button" onclick= "movePlayer(this)">ROLL</button>
+		</div>
+	</div>
+
+</script>
+
+<!-- xxxxxxxxxxxxxxxxxxx    LANGUAGE HTML   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<script id="langGame" type="text/html">
+    <link rel= "stylesheet" href= "styles/langGame.css">
+    
+    <h3 id="lgHeader"> 
+        <span id="lgChosenL">French</span> Game -  enter English word for: 
+    </h3>
+    
+    <p id="lgQSection">
+        <span id="lgWord"> LE CHIEN </span> <input type="text" class="continueInput" id="inputAnswer">
+        <button type="button" id="lgAnswer" class="lgButtons" style="background-color: green;" onclick="answerLang()"> SUBMIT </button>
+    </p>
+    
+    <div id="imageFrame" style="float:left">
+        <button type="button" id="a1" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a2" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a3" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a4" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a5" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a6" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a7" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a8" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a9" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a10" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a11" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a12" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a13" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a14" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a15" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a16" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a17" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a18" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a19" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a20" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a21" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a22" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a23" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+        <button type="button" id="a24" class="lgReveal" onclick="makeInvisible(this.id)"> </button>
+    </div> 
+    
+    <div id="lgBar">
+        <button id="lgBar5" disabled> </button><br>
+        <button id="lgBar4" disabled> </button><br>
+        <button id="lgBar3" disabled> </button><br>
+        <button id="lgBar2" disabled> </button><br>
+        <button id="lgBar1" disabled> </button><br>
+        <button id="lgBar0" disabled> </button><br>
+    </div>
+    
+    <p id="lgHint">
+        <span id="lgInfo"> i </span> &#160;Reveal up to 6 parts of the image to get hints. 
+    </p>
+    
+</script>
+		
+		
+<!-- xxxxxxxxxxxx   milionaire  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+		
+<script id="millGame" type="text/html">
+    
+    <link rel= "stylesheet" href= "styles/mill.css">
+    <h3> 
+        Millionaire Game: Question&#160<span id="noOfQ"></span>:
+    </h3>
+    
+    <div id="millFrame" style="float:left">
+        
+        <div id="millQ">
+            <p id="millQuestion"></p>
+        </div>
+        
+        <div id="millChoices">
+            <button type="button" id="m1" class="millChoice" onclick="answerMill(this.id)"> </button>
+            <button type="button" id="m2" class="millChoice" onclick="answerMill(this.id)"> </button> <br>
+            <button type="button" id="m3" class="millChoice" onclick="answerMill(this.id)"> </button>
+            <button type="button" id="m4" class="millChoice" onclick="answerMill(this.id)"> </button>
+        </div>
+    
+    </div> 
+    
+    <div id="millBar">
+        <button id="millBar1" disabled> </button><br>
+        <button id="millBar2" disabled> </button><br>
+        <button id="millBar3" disabled> </button><br>
+    </div>
+        
+    
+    <p id="millHint">
+        <span id="millInfo"> i </span> &#160;Five questions, 3 strikes out. 
+    </p>
+</script>
+
+<!-- ****************  BIGGER LESS GAME    ***************  -->
+<!---->													<!---->	
+<script id="biggerGame" type="text/html">
+		    
+    <link rel= "stylesheet" href= "styles/bigger.css">
+    <h3>
+        Greater-Equal-Less Game: Question&#160<span id="noOfQB"></span>:
+    </h3>
+    
+    <div id="biggerQ">
+        <p id="biggerQuestion"> Choose the right operator: </p>
+    </div>
+    
+    <div id="biggerFrame" style="float:left">
+        
+        <div id="biggerLeft" style="float:left">
+            <p id="biggerL" class="biggerExpression"> </p>
+        </div>
+        
+        <div id="biggerMiddle" style="float:left">
+            <button type="button" id="b0" class="biggerOp" onclick="answerBigger(this.id)"> &#62; </button><br>
+            <button type="button" id="b1" class="biggerOp" onclick="answerBigger(this.id)"> &#61; </button><br>
+            <button type="button" id="b2" class="biggerOp" onclick="answerBigger(this.id)"> &#60; </button>
+        </div>
+        
+        <div id="biggerRight" style="float:left">
+            <p type="button" id="biggerR" class="biggerExpression"> </p>
+        </div>
+    
+    </div> 
+    
+    <div id="biggerBar" style="float:left">
+        <button id="biggerBar1" disabled> </button><br>
+        <button id="biggerBar2" disabled> </button><br>
+        <button id="biggerBar3" disabled> </button><br>
+    </div>
+        
+    
+    <p id="biggerHint">
+        <span id="biggerInfo"> i </span> &#160;Five questions, 3 strikes out. 
+    </p>
+</script>
+	
+<!-- ****************  HANGMAN HTML  ***************  -->		
+<script id= "hangman" type= "text/html">
+<link rel= "stylesheet" href= "styles/hangman.css">
+	
+	<section id= "hangman">
+		<header id= "hmViewer">
+			<img id= "hmImage" src= "images/hm/happy.png" style= "float: left">
+			<div id= "hmHints">
+				<ul id= "hmHintList">List of Hints
+					<li id= "hmHint3"></li>
+					<li id= "hmHint2"></li>
+					<li id= "hmHint1"></li>
+				</ul>
+			</div>
+		</header>
+		
+		<main id= "hmWord">
+			<div id= "hmWordTray" style= "display: block"></div>
+			<div id= "hmCategory" style= "display: inline"></div>
+		</main>
+		<footer id="hmKeyboard"> </footer>
+	</section>
+</script>
+
+<!-- ****************  RIDDLE HTML  ***************  -->		
+<script id= "riddle" type= "text/html">
+<link rel= "stylesheet" href= "styles/riddle.css">
+
+<section id= "riddle">
+	<header id= "riddleHeader">You have entered the RIDDLEBOX<br>
+								Pick a card to reveal your mystery game<br></header>
+	<div id= "riddleBox"></div>
+	<footer id= "riddleFooter"></footer>
+</section>
+
+</script>
+
+<!-- ****************  ENDGAME HTML  ***************  -->		
+<script id= "endGame" type= "text/html">
+<link rel= "stylesheet" href= "styles/endgame.css">
+	
+	<section>
+		<header id= "endHeader">
+			<img id= "endImage" src= "images/hm/first.png">
+			<p id= "endMessage" style= "background-color: black">Hey.... you actually did it<br>
+								Thank you for rescuing me.</p>
+		</header>
+	</section>
+</script>
+	
+<!-- xxxxxxxxxxxxxxxxxxxxx     PICK GAME     xxxxxxxsssxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- don't worry about this part of the code... :-) -->
+
+<script id="chooseGame" type="text/html">
+ 	<button type="button" class="jennifer" onclick="loadLangGame()">Language Game</button>
+	<button type="button" class="jennifer" onclick="loadHangman()">Hangman Game</button>
+</script>   
+
+<!--  *****************  CLOSING TAGS  **********************  -->
+<!--  *****************  CLOSING TAGS  **********************  -->	
+<!--  *****************  CLOSING TAGS  **********************  -->
+	
+<script src= "odin.js"></script>
+</div>
+</body>	
+</html>

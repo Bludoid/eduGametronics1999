@@ -1,0 +1,100 @@
+body { background-color: black; color: white; }
+/*div {border: 1px white solid;}*/ 
+
+
+header button
+{	width: 		55px;
+	height: 	25px;
+	color: 		white;
+	margin: 	0 10px 0 0;
+	background-color: black; }
+
+#settingsButt { margin-left: 50px; }
+
+img
+{	width: 46px;
+	height: 46px;
+	margin: 1.5px 4px 1.5px 4px;
+	border: 6px solid #333; }
+
+input { width: 80px; }
+label { width: 175px; }
+
+.across
+{	width: 528px;
+	height: 64px; }
+
+.down
+{	width: 64px;
+	height: 396px;
+	display: inline-block; 
+    padding-top: 2px; }
+
+.jennifer
+{
+    width: 100px;
+    height: 50px;
+    background-color: grey; }
+
+#allContent
+{	max-width: 600px;
+	margin: auto; }
+
+#answer
+{	height: 25px;
+    width: 80px;
+    background-color: grey;
+    border: 1px solid darkgrey;
+    border-radius: 3px; }
+
+#board
+{	width: 			680px;
+	height: 		800px;
+	padding-top:	20px; }
+
+#bmiddle
+{	width: 			390px;
+	height: 		390px;
+	display: 		inline-block;
+	vertical-align: top; }
+
+#bulletin
+{	width: 550px;
+	height: 50px; 
+	color: white;
+	margin: 10px 20px 0 10px;
+	padding: 10px 0 0 40px;
+	font-size: 24px; }
+
+#footer
+{	width: 550px;
+	height: 60px;
+	margin: 10px;
+	border: 2px solid white; }
+
+#game 
+{	width: 374px;
+	height: 374px;
+    margin-top: 10px;
+    border: 2px solid grey; }
+
+#introScreen button
+{	width: 50px;
+	height: 25px;
+	background-color: black;
+	color: white; }
+	
+.continueButton 
+{   background-color: green; }
+
+.continueInput 
+{   border: 2px solid green;}
+
+.lgChooseL 
+{   margin: 20px;
+    background-color: green;
+    border-radius: 3px; 
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+}
